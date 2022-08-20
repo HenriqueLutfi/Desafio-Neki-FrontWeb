@@ -44,7 +44,7 @@ export const CardSkill = ({ skill }) => {
   return (
     <>
       <Card
-        style={{ height: "350px", backgroundColor: "rgb(33, 36, 36)" }}
+        style={{ height: "350px", backgroundColor: "rgb(56, 59, 59)" }}
         className="card"
       >
         <Card.Body>
@@ -109,7 +109,7 @@ export const CardSkill = ({ skill }) => {
           }}
           className="d-flex justify-content-center align-items-center w-100"
         >
-          <img src={skill.skill.imageUrl} />
+          <img style={{width: "100%"}} src={skill.skill.imageUrl} />
         </Modal.Body>
         <Modal.Body
           style={{

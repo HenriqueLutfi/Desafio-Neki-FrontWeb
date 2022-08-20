@@ -157,7 +157,7 @@ export const Home = () => {
               fontSize: "40px",
             }}
           >
-            Suas Habilidades
+            Monte Sua Ficha
           </h1>
         </div>
         <ContainerDropDown>
@@ -178,7 +178,7 @@ export const Home = () => {
                 bg="light"
                 expand="lg"
               >
-                Eschola sua Habilidade
+                Escolha Sua Habilidade
                 {/* {skills ? skills : "Atividade Economica*"} */}
               </Dropdown.Toggle>
 
@@ -260,11 +260,13 @@ export const Home = () => {
               Cadastrar nova Habilidade
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body style={{
-            backgroundColor: "rgb(33, 36, 36)",
-            fontWeight: "bold",
-            color: "#ffffff",
-          }}>
+          <Modal.Body
+            style={{
+              backgroundColor: "rgb(33, 36, 36)",
+              fontWeight: "bold",
+              color: "#ffffff",
+            }}
+          >
             <Form>
               <Form.Group controlId="exampleForm.ControlInput1">
                 <Form.Control
@@ -272,6 +274,7 @@ export const Home = () => {
                   placeholder="Nome da Habilidade"
                   autoFocus
                   value={nome}
+                  maxLength={100}
                   onChange={(e) => setNome(e.target.value)}
                 />
                 <Form.Control
@@ -288,6 +291,7 @@ export const Home = () => {
                   placeholder="Versão Habilidade"
                   autoFocus
                   value={versao}
+                  maxLength={10}
                   onChange={(e) => setVersao(e.target.value)}
                 />
                 <Form.Control
@@ -301,12 +305,14 @@ export const Home = () => {
               </Form.Group>
             </Form>
           </Modal.Body>
-
-          <Modal.Footer style={{
-            backgroundColor: "rgb(33, 36, 36)",
-            fontWeight: "bold",
-            color: "#ffffff",
-          }} className="d-flex justify-content-center align-items-center">
+          <Modal.Footer
+            style={{
+              backgroundColor: "rgb(33, 36, 36)",
+              fontWeight: "bold",
+              color: "#ffffff",
+            }}
+            className="d-flex justify-content-center align-items-center"
+          >
             <Button
               variant="primary"
               onClick={() => {
@@ -314,7 +320,7 @@ export const Home = () => {
               }}
               style={{
                 color: "#ffffff",
-                fontWeight:"bold"
+                fontWeight: "bold",
               }}
             >
               CADASTRAR
@@ -441,7 +447,7 @@ export const Home = () => {
             }}
             className="d-flex justify-content-center align-items-center w-100"
           >
-            <img src={addSkill.imageUrl} />
+            <img style={{width: "100%"}} src={addSkill.imageUrl} />
           </Modal.Body>
           <Modal.Body
             style={{
@@ -504,18 +510,20 @@ export const Home = () => {
             }}
           >
             <Button
+              style={{ fontWeight: "bold", color: "white" }}
               variant="secondary"
               onClick={() => setShowModalInfoSave(false)}
             >
-              fechar
+              Fechar
             </Button>
             <Button
+              style={{ fontWeight: "bold", color: "white" }}
               variant="primary"
               onClick={() => {
                 postUserSkill();
               }}
             >
-              adicionar
+              Adicionar
             </Button>
           </Modal.Footer>
         </Modal>
@@ -532,10 +540,11 @@ export const Home = () => {
           </Modal.Body>
           <Modal.Footer>
             <Button
+              style={{ fontWeight: "bold", color: "white" }}
               variant="secondary"
               onClick={() => setShowModalCadastroSkillFail(false)}
             >
-              fechar
+              Fechar
             </Button>
           </Modal.Footer>
         </Modal>

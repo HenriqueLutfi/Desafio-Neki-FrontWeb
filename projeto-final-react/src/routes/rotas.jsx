@@ -27,8 +27,6 @@ export function Rotas() {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<CadastroUser />} />
         <Route path="/home" element={<Home />} />
-        {/* <Route path="/login" element={<Login/>} />
-              <Route path="/cadastro" element={<Cadastro/>} /> */}
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
     </Router>
