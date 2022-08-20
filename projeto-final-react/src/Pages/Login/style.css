@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.BackGroundContainer {
+  background-color: rgb(19, 20, 20);
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.TituloPage {
+  text-align: center;
+}
+
+.ContainerLogin {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.ContainerLoginHolder {
+  width: 50%;
+  height: 60%;
+  background-color: rgb(33, 36, 36);
+  border-radius: 25px;
+  align-items: center;
+}
+
+
+.ContainerCadastroHolder {
+  width: 50%;
+  height: 70%;
+  background-color: rgb(33, 36, 36);
+  border-radius: 25px;
+  align-items: center;
+}
+.topContainerLogin{
+  display: flex;
+  width: 100%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+}
+
+.BottomContainerLogin{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainerLogin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+  justify-content: center;
+
+}
+.ContainerInputLogin{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
+.InputLogin {
+  font-size: 15px;
+  line-height: 1.2;
+  border: none;
+  height: 52px;
+  padding: 5px;
+  border-radius: 3.06px;
+}
+
+.InputSenha {
+  font-size: 15px;
+  line-height: 1.2;
+  border: none;
+  width: 80%;
+  height: 52px;
+  padding: 5px;
+  border-radius: 3.06px;
+}
+
+.ContainerInputSenha{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.showPassword{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  background-color: rgb(39, 44, 44);
+}
+
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
