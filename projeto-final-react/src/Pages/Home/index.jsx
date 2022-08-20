@@ -80,25 +80,34 @@ export const Home = () => {
   };
 
   function enviarDados() {
-    api
-      .post(`/skill`, dadosModal, { headers: { Authorization: token } })
-      .then((result) => {
-        ChangeRender();
-        setNome("");
-        setVersao("");
-        setDescricao("");
-        setImagem("");
-        handleCloseModal();
-      })
-      .catch((error) => {
-        console.log("Erro ao carregar " + JSON.stringify(error));
-        setNome("");
-        setVersao("");
-        setDescricao("");
-        setImagem("");
-        handleCloseModal();
-        setShowModalCadastroSkillFail(true);
-      });
+    if (nome != "" && versao != "" && descricao != "" && imagem != "") {
+      api
+        .post(`/skill`, dadosModal, { headers: { Authorization: token } })
+        .then((result) => {
+          ChangeRender();
+          setNome("");
+          setVersao("");
+          setDescricao("");
+          setImagem("");
+          handleCloseModal();
+        })
+        .catch((error) => {
+          console.log("Erro ao carregar " + JSON.stringify(error));
+          setNome("");
+          setVersao("");
+          setDescricao("");
+          setImagem("");
+          handleCloseModal();
+          setShowModalCadastroSkillFail(true);
+        });
+    } else {
+      setNome("");
+      setVersao("");
+      setDescricao("");
+      setImagem("");
+      handleCloseModal();
+      setShowModalCadastroSkillFail(true);
+    }
   }
 
   function postUserSkill() {
@@ -447,7 +456,7 @@ export const Home = () => {
             }}
             className="d-flex justify-content-center align-items-center w-100"
           >
-            <img style={{width: "100%"}} src={addSkill.imageUrl} />
+            <img style={{ width: "100%" }} src={addSkill.imageUrl} />
           </Modal.Body>
           <Modal.Body
             style={{
@@ -536,7 +545,7 @@ export const Home = () => {
             <Modal.Title>Falha no Cadastro</Modal.Title>
           </Modal.Header>
           <Modal.Body className="d-flex justify-content-center align-items-center w-100">
-            Habilidade ja cadastrada
+            Habilidade ja cadastrada ou campos invalidos
           </Modal.Body>
           <Modal.Footer>
             <Button
